@@ -1,0 +1,199 @@
+/* Reset de margens, paddings e definição do box-sizing */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilização do body com background image que cobre toda a tela e texto branco */
+
+
+/* Container principal com layout em duas colunas: 18% para sidebar e 82% para conteúdo */
+.container {
+  display: grid;
+  grid-template-columns: 10% 90%;
+  min-height: 100vh;
+}
+
+/* Sidebar (coluna da esquerda) */
+.sidebar {
+  background: rgba(195, 68, 68, 0.956);
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Logo centralizado */
+.logo {
+  margin-bottom: 20px;
+}
+
+/* Responsividade do logo */
+.logo img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Menu de navegação com botões */
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Estilo base para os botões do menu */
+.menu-button {
+  text-decoration: none;
+  color: white;
+  padding: 10px 30px;
+  border-radius: 4px;
+}
+
+/* Cores neutras para os botões */
+.btn-brown {
+  background-color: #f61010;
+}
+
+.btn-green {
+  background-color: #ae0c0c;
+}
+
+.btn-yellow {
+  background-color: #4e0606;
+}
+
+/* Área de conteúdo (coluna da direita) */
+.content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Estilo das boxes para as seções */
+.box {
+  background-color: rgba(188, 187, 187, 0.7);
+  padding: 20px;
+  border-radius: 4px;
+}
+
+/* Títulos das boxes em <h2> com cor amarela */
+.box h2 {
+  color: #080602;
+  margin-bottom: 16px;
+}
+
+/* Box Home: layout com imagem e texto (poema) */
+.home-content {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Imagem da box Home */
+.home-image {
+  width: 150px;
+  max-width: 100%;
+  border-radius: 4px;
+}
+
+/* Texto da box Home */
+.home-text {
+  flex: 1;
+}
+
+/* Box Links: layout dos botões para links */
+.links-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Estilo dos botões de links */
+.link-button {
+  text-decoration: none;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+/* Aplicando as cores neutras aos botões de links */
+.link-button.btn-brown {
+  background-color: #ef2c2c;
+}
+
+.link-button.btn-green {
+  background-color: #970c0c;
+}
+
+.link-button.btn-yellow {
+  background-color: #6a0707;
+}
+
+/* Formulário de Contato */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Inputs e textarea com fundo semi-transparente */
+.contact-form input,
+.contact-form textarea {
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  background-color: rgba(134, 133, 133, 0.2);
+  color: rgb(20, 19, 19);
+}
+
+/* Labels do formulário em negrito */
+.contact-form label {
+  font-weight: bold;
+}
+
+/* Botão de enviar com texto em negrito */
+.contact-form button {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f50a0a90;
+  cursor: pointer;
+  color: white;
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+  /* Em telas menores, o layout passa a ter apenas uma coluna */
+  .container {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Ajusta a sidebar para exibição horizontal */
+  .sidebar {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px;
+  }
+  
+  .menu {
+    flex-direction: row;
+    gap: 5px;
+  }
+  
+  /* Reduz os espaçamentos do conteúdo */
+  .content {
+    padding: 10px;
+  }
+  
+  /* Na box Home, empilha imagem e texto */
+  .home-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
